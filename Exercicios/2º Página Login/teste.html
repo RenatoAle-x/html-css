@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FlexBox</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>Login</h1>
+                <form action="index.html" method="post">
+                    <div class="input-box">
+                        <span class="icon">📧</span>
+                        <input type="email" name="Email" placeholder="Email">
+                    </div> <br>
+                    <br>
+                    <div class="input-box">
+                        <span class="icon">🔒</span>
+                        <input type="password" id="senha" name="senha" placeholder="Senha">
+                        <span class="toggle" onclick="mostrarSenha()" id="iconeOlho">👁</span>
+                    </div> <br>
+                    <br>
+                    <button type="submit">Entrar</button>
+            </header>
+        </div>
+    </div>
+<script>
+function mostrarSenha() {
+    const input = document.getElementById("senha");
+    const icone = document.getElementById("iconeOlho");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icone.textContent = "🙈";
+    } else {
+        input.type = "password";
+        icone.textContent = "👁";
+    }
+}
+</script>
+</body>
+</html>
